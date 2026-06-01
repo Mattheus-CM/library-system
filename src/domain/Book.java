@@ -6,37 +6,15 @@ public class Book {
     private String author;
     private String edition;
     private String publisher;
-    private int totalCopies;
-    private int availableCopies;
+    private boolean available;
 
-    public Book(String isbn, String title, String author, String edition, String publisher, int totalCopies) {
+    public Book(String title, String author, String edition, String publisher, String isbn) {
         this.isbn = isbn;
         this.title = title;
         this.author = author;
         this.edition = edition;
         this.publisher = publisher;
-        this.totalCopies = totalCopies;
-        this.availableCopies = totalCopies;
-    }
-
-    public void borrowCopy() {
-        if (availableCopies == 0){
-            System.out.println("No copies available");
-            return;
-        }
-        this.availableCopies--;
-    }
-
-    public void returnCopy(){
-        this.availableCopies++;
-    }
-
-    public void print() {
-        System.out.println("ISBN: " + isbn);
-        System.out.println("Title: " + title);
-        System.out.println("Author: " + author);
-        System.out.println("Edition: " + edition);
-        System.out.println("Publisher: " + publisher);
+        this.available = true;
     }
 
     public String getIsbn() {
@@ -59,11 +37,14 @@ public class Book {
         return publisher;
     }
 
-    public int getTotalCopies() {
-        return totalCopies;
+    public boolean isAvailable() {
+        return available;
     }
 
-    public int getAvailableCopies() {
-        return availableCopies;
+    @Override
+    public String toString() {
+        return "Book: " + title + " - " + author + " - " + edition + " - " + publisher + " - "
+                + isbn + " - " + (available ?  "Available" : "Unavailable");
+
     }
 }

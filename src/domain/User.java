@@ -11,12 +11,6 @@ public class User {
         this.email = email;
     }
 
-    public void print(){
-        System.out.println("ID: " + id);
-        System.out.println("Name: " + name);
-        System.out.println("Email: " + email);
-    }
-
     public int getId() {
         return id;
     }
@@ -27,5 +21,10 @@ public class User {
 
     public String getEmail() {
         return email;
+    }
+
+    @Override
+    public String toString() {
+        return "User: " + name + " - " + email;
     }
 }
