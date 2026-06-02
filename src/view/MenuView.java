@@ -15,7 +15,9 @@ public class MenuView {
         System.out.println("0. Exit");
         System.out.print("Type an option: ");
 
-        return input.nextInt();
+        int option = input.nextInt();
+        input.nextLine();
+        return option;
     }
 
     public int manageBookMenu() {
@@ -26,7 +28,9 @@ public class MenuView {
         System.out.println("0. Exit");
         System.out.print("Type an option: ");
 
-        return input.nextInt();
+        int option = input.nextInt();
+        input.nextLine();
+        return option;
     }
 
     public void manageUserMenu() {
@@ -40,12 +44,12 @@ public class MenuView {
     }
 
     public String readString(String message) {
-        System.out.println(message);
+        System.out.print(message);
         return input.nextLine();
     }
 
     public int readInt(String message) {
-        System.out.println(message);
+        System.out.print(message);
         int value = input.nextInt();
         input.nextLine();
         return value;
