@@ -10,8 +10,10 @@ public class MenuView {
     }
 
     public int mainMenu() {
+        System.out.println();
         System.out.println("--- Welcome to Book Management System ---");
         System.out.println("1. Manage Book");
+        System.out.println("2. Manage User");
         System.out.println("0. Exit");
         System.out.print("Type an option: ");
 
@@ -33,14 +35,17 @@ public class MenuView {
         return option;
     }
 
-    public void manageUserMenu() {
+    public int manageUserMenu() {
+        System.out.println();
         System.out.println("--- Manage User ---");
         System.out.println("1. Create User");
         System.out.println("2. List all Users");
-        System.out.println("3. Update Users");
-        System.out.println("4. Delete User");
         System.out.println("0. Exit");
         System.out.print("Type a number: ");
+
+        int option = input.nextInt();
+        input.nextLine();
+        return option;
     }
 
     public String readString(String message) {
