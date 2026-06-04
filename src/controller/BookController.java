@@ -16,28 +16,6 @@ public class BookController {
         this.menuView = menuView;
     }
 
-    public void manage() {
-        int option;
-        do {
-            option = menuView.manageBookMenu();
-
-            switch (option) {
-                case 1:
-                    create();
-                    break;
-
-                case 2:
-                    list();
-                    break;
-
-                case 0:
-                    option = menuView.mainMenu();
-                    break;
-            }
-        } while (option != 0);
-
-    }
-
     public void create() {
         System.out.println("--------------------------");
         System.out.println("------ CREATE BOOK -------");

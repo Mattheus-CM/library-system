@@ -23,7 +23,7 @@ public class LibraryController {
 
             switch (option) {
                 case 1:
-                    bookController.manage();
+                    manageBooks();
                     break;
 
                 case 0:
@@ -32,6 +32,27 @@ public class LibraryController {
 
                 default:
                     System.out.println("Invalid option!");
+                    break;
+            }
+        } while (option != 0);
+    }
+
+    public void manageBooks() {
+        int option;
+        do {
+            option = menuView.manageBookMenu();
+
+            switch (option) {
+                case 1:
+                    bookController.create();
+                    break;
+
+                case 2:
+                    bookController.list();
+                    break;
+
+                case 0:
+                    System.out.println("Returning to main menu...");
                     break;
             }
         } while (option != 0);
