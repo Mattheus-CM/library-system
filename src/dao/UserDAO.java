@@ -1,6 +1,5 @@
 package dao;
 
-import domain.Book;
 import domain.User;
 
 public class UserDAO {

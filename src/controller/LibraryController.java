@@ -2,7 +2,6 @@ package controller;
 
 import dao.BookDAO;
 import dao.UserDAO;
-import domain.User;
 import view.BookView;
 import view.MenuView;
 import view.UserView;
